@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements cron_correo_cron().
+ */
+function cron_correo_cron() {
+  watchdog('cron_correo', 'El cron ha sido ejecutado.');
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function cron_correo_node_insert($node) {
+  // Verifica si el nodo insertado es del tipo "noticia".
+  if ($node->type == 'noticia') {
+    // Ejecuta tu lógica de cron aquí.
+    // Por ejemplo, puedes llamar a la función drupal_http_request() para
+    // hacer una solicitud HTTP a tu script cron personalizado.
+    // drupal_http_request('http://tudominio.com/mi-script-cron.php');
+    
+    // O puedes ejecutar directamente la función que necesitas.
+    // Por ejemplo, si tienes una función en tu módulo llamada
+    // mi_modulo_mi_funcion_cron(), puedes llamarla así:
+    // mi_modulo_mi_funcion_cron();
+    watchdog('cron_correo', 'Nuevo contenido creado con exito.');
+  }
+}

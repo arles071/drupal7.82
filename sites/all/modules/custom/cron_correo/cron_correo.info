@@ -1,0 +1,4 @@
+name = Cron Correo
+description = Registra mensajes de registro cada vez que se ejecuta el cron.
+package = Custom
+core = 7.x

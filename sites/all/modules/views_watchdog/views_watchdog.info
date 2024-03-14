@@ -1,0 +1,19 @@
+
+name = Views Watchdog
+description = Extends the Views module and allows to create custom lists of log entries.
+
+core = 7.x
+package = Views
+php = 5.3.0
+
+dependencies[] = dblog
+dependencies[] = views (>=3.13)
+
+files[] = views/views_handler_field_views_watchdog_message.inc
+
+; Information added by Drupal.org packaging script on 2016-03-22
+version = "7.x-4.0-rc1+0-dev"
+core = "7.x"
+project = "views_watchdog"
+datestamp = "1458605953"
+

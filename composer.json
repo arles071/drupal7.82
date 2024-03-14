@@ -1,0 +1,11 @@
+{
+    "name": "premioint/premioint",
+    "require": {
+        "drush/drush": "^8"
+    },
+    "extra": {
+        "installer-paths": {
+            ".": ["type:drupal-core"]
+        }
+    }
+}
