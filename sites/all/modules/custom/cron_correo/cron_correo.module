@@ -11,7 +11,8 @@ function cron_correo_cron() {
  * Implements hook_node_insert().
  */
 function cron_correo_node_insert($node) {
-  // Verifica si el nodo insertado es del tipo "noticia".
+  // Verifica si el nodo insertado es del tipo "Noticia".
+  watchdog('cron_correo', $node->type);
   if ($node->type == 'noticia') {
     // Ejecuta tu lógica de cron aquí.
     // Por ejemplo, puedes llamar a la función drupal_http_request() para
